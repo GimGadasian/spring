@@ -1,0 +1,14 @@
+1. dto 패키지 생성 > 클래스 만들기
+	tip: lombok을 깔았으면 어노테이션을 통해 생성자, 게터세터 생성 가능
+	
+2. service 패키지 생성
+	> 인터페이스 생성
+	> 인터페이스를 상속받는 클래스 생성 후 @Service처리
+	
+3. dao 패키지 생성
+	> 인터페이스 생성 후 @Mapper 처리
+
+4. src/main/resources 위치에 mapper 폴더 생성 
+	>member 폴더 생성 
+	> xml파일 생성: select, insert, update, delete
+	
