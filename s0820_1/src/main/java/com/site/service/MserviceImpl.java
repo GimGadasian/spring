@@ -1,5 +1,6 @@
 package com.site.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import com.site.dto.Member;
 
 @Service
 public class MserviceImpl implements Mservice{
-
+	private List<Member> list = new ArrayList<>();
 	@Autowired MemberMapper memberMapper;
 	@Override
 	public List<Member> selectAll() {
@@ -22,6 +23,16 @@ public class MserviceImpl implements Mservice{
 	public Member selectLogin(String id, String pw) {
 		// TODO Auto-generated method stub
 		Member member = memberMapper.selectLogin(id, pw);
+		return member;
+	}
+	
+	@Override
+	public void addMem(Member member) {
+		list.add(member);
+	}
+	@Override
+	public Member findAndId(String id) {
+		Member member = memberMapper.findAndId(id);
 		return member;
 	}
 

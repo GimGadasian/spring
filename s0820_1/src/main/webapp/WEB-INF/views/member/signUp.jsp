@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,17 +12,11 @@
 </style>
 </head>
 <body>
-	<script type="text/javascript">
-	if("${flag}"=="-1"){
-		   alert("아이디 또는 패스워드가 일치하지 않습니다. 다시 입력하세요.");
-	   }
-	
-	</script>
-	<h2>login page</h2>
-	<form action="/member/login" method="post">
+	<h2>sign up page</h2>
+	<form action="/member/signUp" method="post">
 	<table>
 		<tr>
-			<td colspan="2" style="text-align: center; color: darkblue;"><strong>Login</strong></td>
+			<td colspan="2" style="text-align: center; color: darkblue;"><strong>Join Us!</strong></td>
 		</tr>
 		<tr>
 			<td>
@@ -43,7 +36,7 @@
 			</td>
 		</tr>
 		
-		<!-- 
+		
 		<tr>
 			<td>
 				<label>Name</label>
@@ -84,7 +77,7 @@
 				<input type="checkbox" name="hobby" value="travel"> Travel
 			</td>
 		</tr>
-		 -->
+		 
 		
 		
 		<tr>

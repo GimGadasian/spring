@@ -11,4 +11,14 @@
   <select id="selectLogin" resultType="com.site.dto.Member">
     select * from member where id=#{id} and pw=#{pw}
   </select>
+  
+  <select id="findAndId" resultType="com.site.dto.Member">
+    select * from member where id=#{id}
+  </select>
+  
+  <insert id="addMem" parameterType="com.site.dto.Member">
+  	INSERT INTO member (id, pw, name, phone, gender, hobby) 
+    VALUES (#{id}, #{pw}, #{name}, #{phone}, #{gender}, #{hobby})
+  	
+  </insert>
 </mapper>

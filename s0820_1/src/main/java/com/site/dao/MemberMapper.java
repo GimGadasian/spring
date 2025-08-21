@@ -14,4 +14,6 @@ public interface MemberMapper {
 
 	Member selectLogin(@Param("id") String id, @Param("pw") String pw);
 
+	Member findAndId(String id);
+
 }

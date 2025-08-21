@@ -10,4 +10,8 @@ public interface Mservice {
 
 	Member selectLogin(String id, String pw);
 
+	void addMem(Member member);
+
+	Member findAndId(String id);
+
 }
