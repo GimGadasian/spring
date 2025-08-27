@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class FrontController {
 	@GetMapping("/")
-	public String index(
-		@RequestParam(name="flag", defaultValue="0") int flag, Model model) {
-		model.addAttribute("flag", flag);
+	public String index(Model model) {
 		return "index";
 	}
 

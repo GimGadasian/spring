@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,9 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/style_main.css">
 		
 		<script>
-			if("${flag}"=="1") {
-				alert("로그인 되었습니다.");
-			}
+		  if("${flag}"=="1") alert("로그인이 되었습니다.");
+		  if("${flag}"=="-1") alert("로그아웃이 되었습니다.");
 		</script>
 		
 	</head>
@@ -19,8 +19,14 @@
 	 	<header>
 	 		<div id="nav_up">
 	 			<ul>
-	 				<li>회원가입</li>
-	 				<li><a href="/member/login">로그인</a></li>
+	 			<c:if test="${session_id == null }">
+		 				<li><a href="/member/insert01">회원가입</a></li>
+		 				<li><a href="/member/login">로그인</a></li>
+	 			</c:if>
+	 			<c:if test="${session_id != null }">
+		 				<li>환영합니다, ${session_name}님</li>
+		 				<li><a href="/member/logout">로그아웃</a></li>
+	 			</c:if>
 	 				<li>고객행복센터</li>
 	 				<li>배송정보검색</li>
 	 				<li>기프트카드 등록</li>
